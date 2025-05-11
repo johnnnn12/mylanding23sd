@@ -1,0 +1,11 @@
+[build]
+  # команда установки зависимостей + сборки
+  command = "npm ci && npm run build"
+  # папка, из которой отдавать сайт
+  publish = "dist"
+
+# Обязательно для SPA: все запросы на index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
